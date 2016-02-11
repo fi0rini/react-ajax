@@ -1,7 +1,7 @@
 # ajax
 React ajax component
 
-### set up
+### Installation
 
     npm i
     npm start

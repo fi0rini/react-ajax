@@ -1,0 +1,2 @@
+# ajax
+React ajax component

@@ -1,4 +1,4 @@
-# react-ajax
+# React AJAX
 React ajax component
 
 ### Installation

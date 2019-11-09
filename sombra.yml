@@ -1,0 +1,12 @@
+version: '1.0'
+jobs:
+  build:
+    branch: master
+    docker: 
+      image: alpine
+      # workingdir: /app
+    environment:
+      NAME: nick
+    commands:
+      - pwd
+      - ls -al

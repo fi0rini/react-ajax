@@ -2,14 +2,14 @@ version: '1.0'
 jobs:
   install:
     docker: 
-      image: node:10
+      image: node:8
     environment:
       NAME: nick
     commands:
       - npm install
   test:
     docker: 
-      image: node:10
+      image: node:8
     environment:
       NAME: nick
     commands:

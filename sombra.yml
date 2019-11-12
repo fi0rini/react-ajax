@@ -2,12 +2,12 @@ version: '1.0'
 jobs:
   tests:
     docker: 
-      image: alpine
+      image: node:10
     environment:
       NAME: nick
     commands:
-      - pwd
-      - ls -al
+      - npm install
+      - npm test
 
 workloads:
   unit-tests:

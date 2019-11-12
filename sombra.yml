@@ -1,12 +1,18 @@
 version: '1.0'
 jobs:
-  tests:
+  install:
     docker: 
       image: node:10
     environment:
       NAME: nick
     commands:
       - npm install
+  test:
+    docker: 
+      image: node:10
+    environment:
+      NAME: nick
+    commands:
       - npm test
 
 workloads:
@@ -15,6 +21,7 @@ workloads:
     events:
       - push
     jobs:
-      - tests
+      - install
+      - test
   integration:
     branch: integration

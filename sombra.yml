@@ -1,0 +1,20 @@
+version: '1.0'
+jobs:
+  tests:
+    docker: 
+      image: alpine
+    environment:
+      NAME: nick
+    commands:
+      - pwd
+      - ls -al
+
+workloads:
+  unit-tests:
+    branch: fionic-patch-2
+    events:
+      - push
+    jobs:
+      - tests
+  integration:
+    branch: integration

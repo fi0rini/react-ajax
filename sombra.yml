@@ -13,6 +13,8 @@ jobs:
     environment:
       NAME: nick
     commands:
+			- echo "failing test"
+			- npm test
       - echo "passed through the test"
 
 workloads:

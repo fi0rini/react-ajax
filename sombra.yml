@@ -1,0 +1,29 @@
+version: '1.0'
+jobs:
+  install:
+    docker: 
+      image: node:8
+    environment:
+      NAME: nick
+    commands:
+      - npm install
+  test:
+    docker: 
+      image: node:8
+    environment:
+      NAME: nick
+    commands:
+      - echo "failing test"
+      - npm test
+      - echo "passed through the test"
+
+workloads:
+  unit-tests:
+    branch: fionic-patch-2
+    events:
+      - push
+    jobs:
+      - install
+      - test
+  integration:
+    branch: integration
